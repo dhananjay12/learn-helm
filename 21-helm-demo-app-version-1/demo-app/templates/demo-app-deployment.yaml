@@ -13,7 +13,8 @@ spec:
         run: demo-app
     spec:
       containers:
-        - image: dhananjay12/demo-app:1.0.0
+        - image: dhananjay12/demo-app:1.1.0
+          imagePullPolicy: Always
           name: demo-app
           ports:
             - containerPort: 8080
