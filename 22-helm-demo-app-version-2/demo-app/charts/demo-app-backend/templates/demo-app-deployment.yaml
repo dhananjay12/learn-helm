@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: demo-app
+  name: demo-app
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: demo-app
+    spec:
+      containers:
+        - env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://db/test
+          image: dhananjay12/demo-app:2.0.0
+          imagePullPolicy: Always
+          name: demo-app
+          ports:
+            - containerPort: 8080
+          resources: {}
+      restartPolicy: Always
+status: {}
