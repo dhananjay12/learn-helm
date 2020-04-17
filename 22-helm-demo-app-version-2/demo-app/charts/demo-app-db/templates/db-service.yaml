@@ -11,5 +11,3 @@ spec:
       targetPort: 27017
   selector:
     app: db
-status:
-  loadBalancer: {}

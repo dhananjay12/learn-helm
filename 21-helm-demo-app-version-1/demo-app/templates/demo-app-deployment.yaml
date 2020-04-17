@@ -1,19 +1,19 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    run: demo-app
   name: demo-app
 spec:
   replicas: 1
-  strategy: {}
+  selector:
+    matchLabels:
+      app: demo-app
   template:
     metadata:
       labels:
-        run: demo-app
+        app: demo-app
     spec:
       containers:
-        - image: dhananjay12/demo-app:1.0.0
+        - image: dhananjay12/demo-app:1.1.0
           imagePullPolicy: Always
           name: demo-app
           ports:

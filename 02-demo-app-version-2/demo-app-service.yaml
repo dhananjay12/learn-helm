@@ -2,12 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    run: demo-app
+    name: demo-app
   name: demo-app
 spec:
+  type: ClusterIP #default anyways
   ports:
-    - name: demo-app
+    - protocol: "TCP" #default anyways
       port: 8080
       targetPort: 8080
   selector:
-    run: demo-app
+    app: demo-app
