@@ -15,7 +15,8 @@ spec:
       containers:
         - env:
             - name: SPRING_DATA_MONGODB_URI
-              value: mongodb://{{ .Release.Name }}-demo-app-db/test
+              value: {{.Values.mongo_uri}}
+ #             value: mongodb://{{ .Release.Name }}-demo-app-db/test
           image: {{ .Values.image.name }}:{{ .Values.image.tag }}
           imagePullPolicy: Always
           name: {{ .Release.Name }}-{{ .Chart.Name }}

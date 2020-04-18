@@ -1,4 +1,4 @@
-#mongoUri: "mongodb://{{tpl .Release.Name }}-demo-app-db/test"
+mongo_uri: "mongodb://db/test"
 image:
   name: dhananjay12/demo-app
   tag: "2.0.0"
