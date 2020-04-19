@@ -1,0 +1,9 @@
+dependencies:
+- name: demo-app-backend
+  repository: http://127.0.0.1:8879/charts
+  version: 2.0.0
+- name: demo-app-db
+  repository: http://127.0.0.1:8879/charts
+  version: 0.1.0
+digest: sha256:011c9b39a2e54c419b05403386051f2088a2939ae6f729ae62a0c081d25d24aa
+generated: 2020-04-19T05:23:23.9197892+02:00

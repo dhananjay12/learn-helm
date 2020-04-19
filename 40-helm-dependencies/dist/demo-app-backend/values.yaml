@@ -1,0 +1,13 @@
+secret:
+  mongodb_uri:
+#    username: admin
+#    password: admin
+    dbchart: demo-app-db
+    dbconn: "test"
+image:
+  name: dhananjay12/demo-app
+  tag: "2.0.0"
+replicaCount: 1
+service:
+  type: ClusterIP
+  port: 8080
