@@ -1,7 +1,7 @@
 mongo_uri: "mongodb://db/test"
 image:
   name: dhananjay12/demo-app
-  tag: "2.0.0"
+  tag: "3.0.0"
 replicaCount: 1
 service:
   type: ClusterIP

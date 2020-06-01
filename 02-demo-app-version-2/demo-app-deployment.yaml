@@ -16,7 +16,7 @@ spec:
         - env:
             - name: SPRING_DATA_MONGODB_URI
               value: mongodb://db/test
-          image: dhananjay12/demo-app:2.0.0
+          image: dhananjay12/demo-app:3.0.0
           imagePullPolicy: Always
           name: demo-app
           ports:

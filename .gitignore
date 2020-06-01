@@ -2,3 +2,4 @@
 **/*.tgz
 test
 test.yaml
+.idea/
