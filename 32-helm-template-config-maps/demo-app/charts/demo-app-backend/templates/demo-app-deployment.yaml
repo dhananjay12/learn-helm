@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "demo-app-backend.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "demo-app-backend.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "demo-app-backend.fullname" . }}
+    spec:
+      containers:
+        - env:
+            - name: SPRING_CONFIG_ADDITIONAL-LOCATION
+              value: /myconfig/
+          image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+          imagePullPolicy: Always
+          name: {{ include "demo-app-backend.fullname" . }}
+          ports:
+            - containerPort: 8080
+          resources: {}
+          volumeMounts:
+            - mountPath: /myconfig/
+              name: config
+      volumes:
+        - name: config
+          configMap:
+            name: {{ .Release.Name }}-configmap
+            items:
+            - key: application.yml
+              path: application.yml
+      restartPolicy: Always
+status: {}

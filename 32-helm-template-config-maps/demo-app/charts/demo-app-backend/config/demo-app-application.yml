@@ -1,0 +1,15 @@
+app:
+  fortune:
+    source: file
+  fortunes:
+      - Dream your dream and your dream will dream of you.
+      - Try everything once, even the things you don't think you will like.
+      - You are only young once, but you can stay immature indefinitely.
+      - Try to value useful qualities in one who loves you.
+      - Wisdom comes from experience.
+      - You will have good luck and overcome many hardships.
+      - Your energy returns and you will get things done.
+      - Being alone and being lonely are two different things.
+      - Life is to you a dashing and bold adventure.
+      - Dispel negativity through creative activities.
+
