@@ -1,0 +1,30 @@
+{{- if .Values.ingress.enabled -}}
+{{- $fullName := include "app.name" . }}
+{{- $httpPort := .Values.service.httpPort }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+  {{- range $key, $value := .Values.ingress.annotations }}
+    {{ $key }}: {{ $value | quote }}
+  {{- end }}
+  labels:
+    app: {{ template "app.name" . }}
+    release: "{{ .Release.Name }}"
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+  name: {{ template "app.name" . }}
+  namespace: {{ .Release.Namespace | quote }}
+spec:
+  rules:
+  {{- range .Values.ingress.hosts }}
+    - host: {{ .host }}
+      http:
+        paths:
+        {{- range .paths }}
+          - backend:
+              serviceName: {{ $fullName }}
+              servicePort: {{ $httpPort }}
+            path: {{ . }}
+        {{- end }}
+  {{- end -}}
+{{- end -}}
