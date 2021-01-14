@@ -32,3 +32,20 @@ Check using:
 ```
 helm repo list
 ```
+
+If you run 
+
+```
+helm search repo generic-chart
+```
+Output will be something like 
+```
+NAME                            CHART VERSION   APP VERSION     DESCRIPTION
+mygithubcharts/generic-chart    0.0.1           1.0.0           Helm chart for deploying basic applications
+```
+
+Install by:
+
+```
+helm install local mygithubcharts/generic-chart --version=0.0.1
+```
