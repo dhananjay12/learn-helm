@@ -1,5 +1,8 @@
 .vscode/
+# this ignores all tgz files
 **/*.tgz
+# this negates the above. Order is imp
+!/docs/**
 test
 test.yaml
 .idea/
