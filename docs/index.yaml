@@ -1,0 +1,19 @@
+apiVersion: v1
+entries:
+  generic-chart:
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: "2021-01-15T00:42:17.7457077+01:00"
+    description: Helm chart for deploying basic applications
+    digest: d904fecd9d2902ef0106296e2358516b6f5ee7280b48c6debf02abdf9dc5ba7f
+    keywords:
+    - helm
+    maintainers:
+    - name: dhananjay
+    name: generic-chart
+    sources:
+    - https://github.com/dhananjay12/learn-helm/generic-chart
+    urls:
+    - https://dhananjay12.github.io/learn-helm/generic-chart-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-01-15T00:42:17.7447129+01:00"
