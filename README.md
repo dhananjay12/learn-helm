@@ -21,4 +21,14 @@ Copy the charts the docs folder and to create index.yaml use:
 helm repo index .
 ```
 
+To add this repo to locally
 
+```
+helm repo add mygithubcharts https://dhananjay12.github.io/learn-helm/
+```
+
+Check using:
+
+```
+helm repo list
+```
