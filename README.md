@@ -18,7 +18,7 @@ Basically, a chart repository consists of packaged charts and a special file cal
 Copy the charts the docs folder and to create index.yaml use:
 
 ```
-helm repo index .
+helm repo index --url https://dhananjay12.github.io/learn-helm/ --merge index.yaml .
 ```
 
 To add this repo to locally
