@@ -3,9 +3,9 @@ entries:
   generic-chart:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2021-10-09T12:12:12.880894+02:00"
+    created: "2021-10-09T12:25:56.557378+02:00"
     description: Helm chart for deploying basic applications
-    digest: b29028af147d7b0b0d3f2cdc9e4877a6b52fd5bccfa1773f9c8a9f61399f70b0
+    digest: 00bd1b94cf90f92c7aac1bf01f7257cf05ce5ac68598f4b818bc8fa6c7c2891d
     keywords:
     - helm
     maintainers:
@@ -16,4 +16,4 @@ entries:
     urls:
     - generic-chart-0.0.1.tgz
     version: 0.0.1
-generated: "2021-10-09T12:12:12.879965+02:00"
+generated: "2021-10-09T12:25:56.556369+02:00"

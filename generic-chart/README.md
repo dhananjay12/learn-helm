@@ -1,3 +1,17 @@
+### How to deploy the chart
+
+Package the chart:
+
+```
+helm package .
+```
+
+Copy the generated `tgz` file to docs folder. Then update the index by running:
+
+```
+ helm repo index .
+```
+
 ### Install local Ingress
 
 https://kubernetes.github.io/ingress-nginx/deploy/

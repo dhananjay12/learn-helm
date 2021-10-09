@@ -27,6 +27,7 @@ spec:
                 port:
                   number: {{ $httpPort }}
             path: {{ . }}
+            pathType: Prefix
         {{- end }}
   {{- end -}}
 {{- end -}}
